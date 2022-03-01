@@ -1,0 +1,175 @@
+*{margin:0; padding: 0}
+.slidewrapper{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.cacslide {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.motslide {
+	width: 100%;
+	height: 100%;
+}
+.cacslide ul{
+	height: 100%;
+	position: relative;
+}
+ol, ul {
+	padding-left: 0rem;
+}
+
+html,body{
+	width: 100% ;
+	height:100%;
+	overflow-x: hidden;
+}
+.cacslide ul li {
+	list-style: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: 0.4s;
+	opacity: 0;
+}
+
+.cacslide ul li.active {
+	opacity: 1;
+}
+
+.cacslide ul li .motslide{
+	position: relative;
+}
+
+
+.motslide .anh{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+
+.motslide .tamduoi1,
+.motslide .tamduoi2,
+.motslide .tamtren,
+.motslide .textnoidung{
+	position: absolute;
+	top:0px;
+
+}
+
+.motslide .tamduoi1{
+	opacity: 0;
+	top:-80%;
+}
+/* Sau khi co active */
+ul li.active .motslide .tamduoi1{
+	animation:nauvao 1s forwards;
+}
+@-webkit-keyframes nauvao{
+	from {
+		transform: translateX(0%) translateY(100%);
+		opacity: 0;
+}
+	to{
+		transform: translateX(0%) translateY(0%);
+		opacity: 0.4;
+	}
+}
+@-webkit-keyframes nauvao1{
+	from {
+		transform: translateX(100%) translateY(0%);
+		opacity: 0;
+}
+	to{
+		transform: translateX(0%) translateY(0%);
+		opacity: 0.4;
+	}
+}
+
+.motslide .tamduoi2{
+	opacity: 0.6;
+	top:-40%;
+}
+ul li.active .motslide .tamduoi2{
+	animation:nauvao 1s forwards;
+}
+.motslide .tamtren{
+	opacity: 0.6;
+	right: 0px;
+
+}
+ul li.active .motslide .tamtren{
+	animation:nauvao1 1s forwards;
+}
+.motslide .textnoidung{
+	width: 18%;
+	left:4%;
+	z-index: 3;
+	opacity: 1;
+	top: 40%;
+	color: white;
+	
+}
+
+
+.textnoidung h2{
+    font-size: 50px;
+}
+.textnoidung small{
+    font-size: 33;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px 0px 9px 0px;
+    font-weight: bold;
+    display: block;
+}
+.textnoidung .ke{
+    width: 170%;
+    background: white;
+    height: 2px;
+    margin: 0;
+}
+.textnoidung p{
+    font-size: 12px;
+    line-height: 20px;
+    color: #ffffffa6;
+}
+.textnoidung .nut{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    display: inline-block;
+    margin: 8px 0 0 0;
+    font-size: 15px;
+}
+
+.chuyenslide ul {
+	display: inline;
+}
+
+.chuyenslide ul li {
+	display: inline-block;
+	border: 1px solid gray;
+	text-indent: -9999px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	margin: 20px 10px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.dangchay{
+		background: #2c2b2b;
+}
+.chuyenslide ul li:hover,
+.chuyenslide ul li .dangchay {
+	background: #2c2b2b;
+}
+
+.chuyenslide{position: absolute;text-align: center;bottom: 1%;left: 50%;transform: translateX(-50%);z-index: 9;}
+
+
